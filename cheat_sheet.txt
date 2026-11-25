@@ -1,0 +1,28 @@
+python-mysql
+sudo apt install python3-pymysql
+MySQL
+sudo apt install mysql-server
+
+base
+CREATE DATABASE so_g3_parqueadero;
+
+usuario
+
+CREATE USER 'app_g3'@'localhost' IDENTIFIED BY 'SO123';
+GRANT ALL PRIVILEGES ON so_g3_parqueadero.* TO 'app_g3'@'localhost';
+FLUSH PRIVILEGES;
+
+importar de script
+
+mysql -u usuario -p nombre_base < archivo.sql
+
+=== CAMBIAR LA ETIQUETA (PROMPT) DE LA SHELL ===
+# 1. Abrir el archivo (bash)
+nano ~/.bashrc
+
+# 2. Agregar o modificar la variable PS1 al final del archivo.
+export PS1="\[\033[01;33m\][G3-Parqueadero]\[\033[00m\]:$ "
+
+# 3. Guardar y recargar
+source ~/.bashrc
+
