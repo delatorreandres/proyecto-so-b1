@@ -1,18 +1,18 @@
-python-mysql
+#python-mysql
 sudo apt install python3-pymysql
-MySQL
+#MySQL
 sudo apt install mysql-server
 
-base
+#base
 CREATE DATABASE so_g3_parqueadero;
 
-usuario
+#usuario
 
 CREATE USER 'app_g3'@'localhost' IDENTIFIED BY 'SO123';
 GRANT ALL PRIVILEGES ON so_g3_parqueadero.* TO 'app_g3'@'localhost';
 FLUSH PRIVILEGES;
 
-importar de script
+#importar de script
 
 mysql -u usuario -p nombre_base < archivo.sql
 
